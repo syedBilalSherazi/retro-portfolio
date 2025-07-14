@@ -1,0 +1,19 @@
+.menu-bar {
+  @apply flex justify-center gap-6 py-4 bg-black text-green-400 text-sm border-b border-green-400;
+  font-family: 'Courier New', monospace;
+}
+
+.menu-item {
+  cursor: pointer;
+  text-shadow: 0 0 3px #0f0;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+  color: white;
+}
+
+.menu-item.active {
+  font-weight: bold;
+  text-decoration: underline;
+}

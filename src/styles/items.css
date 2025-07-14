@@ -1,0 +1,98 @@
+/* src/styles/items.css */
+
+.items-container {
+  background: linear-gradient(to bottom, #1b0033, #000814);
+  color: #00ffff;
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  font-family: 'Press Start 2P', monospace;
+  overflow-x: hidden;
+}
+
+.items-heading {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  color: #39ff14;
+  text-shadow: 0 0 8px #39ff14;
+}
+
+.powerups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.power-card {
+  background: #0a0a0a;
+  border: 2px solid #5555ff;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px #5555ff80;
+  position: relative;
+  text-align: center;
+}
+
+.power-title {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 0 4px #ffffff;
+}
+
+.power-level {
+  font-size: 0.7rem;
+  margin-bottom: 0.8rem;
+  color: #00eaff;
+}
+
+.power-bar {
+  height: 10px;
+  background: #333;
+  border: 1px solid #999;
+  position: relative;
+  margin: 0 auto 0.5rem auto;
+}
+
+.power-fill {
+  height: 100%;
+  background: linear-gradient(to right, #ff0066, #ffa500, #39ff14, #00ffff, #cc66ff);
+  transition: width 0.4s ease-in-out;
+}
+
+.power-percent {
+  font-size: 0.7rem;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.inventory-heading {
+  text-align: center;
+  font-size: 1rem;
+  color: #ff99ff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 6px #cc33ff;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.inventory-item {
+  background: #1a1a1a;
+  padding: 0.7rem 1rem;
+  border: 2px solid #00ffff;
+  text-align: center;
+  font-size: 0.6rem;
+  color: #00ffff;
+  text-shadow: 0 0 3px #00ffff;
+  transition: all 0.2s;
+  box-shadow: 0 0 5px #00ffff80;
+}
+
+.inventory-item:hover {
+  background: #00ffff;
+  color: #000;
+}

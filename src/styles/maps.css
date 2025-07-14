@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.map-container {
+  background: #000;
+  color: #fff;
+  padding: 3rem 1.5rem;
+  font-family: 'Press Start 2P', monospace;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.map-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, #ff00cc, #3333ff, #00ffcc, #ffff00);
+  z-index: -1;
+  opacity: 0.08;
+  animation: rainbowPulse 15s linear infinite;
+}
+
+@keyframes rainbowPulse {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.map-heading {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: #ff00cc;
+  text-shadow: 0 0 8px #ff00cc;
+}
+
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.map-card {
+  background: #111;
+  border: 3px solid #00ffff;
+  padding: 1.5rem;
+  box-shadow: 0 0 12px #00ffffaa;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.map-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 16px #ff00cc;
+  border-color: #ff00cc;
+}
+
+.map-card h3 {
+  font-size: 0.75rem;
+  color: #39ff14;
+  text-shadow: 0 0 4px #39ff14;
+  margin-bottom: 0.5rem;
+}
+
+.map-card p {
+  font-size: 0.5rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.quest-type {
+  display: inline-block;
+  font-size: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border: 2px dashed #00ffff;
+  color: #00ffff;
+  background-color: #000;
+  text-shadow: 0 0 3px #00ffff;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 4px #00ffff;
+  }
+  100% {
+    box-shadow: 0 0 8px #00ffff, 0 0 12px #ff00cc;
+  }
+}

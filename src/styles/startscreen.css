@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.retro-screen {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(150deg, #1a0028, #000214);
+  font-family: 'Press Start 2P', monospace;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars {
+  position: absolute;
+  width: 400%;
+  height: 400%;
+  background-image: radial-gradient(#ffffff 1.5px, transparent 1.5px),
+                    radial-gradient(#39ff14 1px, transparent 1px),
+                    radial-gradient(#00f0ff 1px, transparent 1px);
+  background-size: 30px 30px, 60px 60px, 90px 90px;
+  animation: starfield 60s linear infinite;
+  opacity: 0.25;
+  z-index: 0;
+  filter: drop-shadow(0 0 4px #00ffff);
+}
+
+@keyframes starfield {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-20%, -25%); }
+}
+
+.content-box {
+  text-align: center;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.retro-title {
+  font-size: 2rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffee, 0 0 20px #00ffe1;
+  animation: glitch-glow 2s infinite alternate;
+}
+
+@keyframes glitch-glow {
+  0% { text-shadow: 0 0 5px #00ffee, 0 0 10px #00ffe1; }
+  100% { text-shadow: 0 0 10px #00ffee, 0 0 30px #00ffe1; }
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: #ff40c0;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 8px #ff40c0;
+}
+
+.hud {
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+  color: #ffeb3b;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  from { opacity: 0.9; }
+  to { opacity: 0.6; }
+}
+
+.start-btn {
+  background: #00ff90;
+  color: #000;
+  border: 3px solid #00cc66;
+  padding: 1.2rem 2rem;
+  font-size: 0.85rem;
+  text-shadow: none;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 15px #00ff90;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.start-btn:hover {
+  transform: scale(1.08);
+  background: #33ffaa;
+  box-shadow: 0 0 25px #00ff90;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.footer-ui {
+  margin-top: 2rem;
+  font-size: 0.65rem;
+  opacity: 0.75;
+  color: #ccc;
+}
+
+kbd {
+  background: #111;
+  border: 2px solid #0f0;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.6rem;
+  color: #0f0;
+  border-radius: 4px;
+}

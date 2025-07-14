@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.game-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #14001a, #0b0020);
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #00cfff;
+}
+
+.game-title {
+  color: #00ffff;
+  font-size: 0.9rem;
+}
+
+.game-menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.game-menu li {
+  color: white;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.game-menu li.active,
+.game-menu li:hover {
+  color: #ffcc00;
+}
+
+.game-score {
+  color: #ffcc00;
+  font-size: 0.8rem;
+}
