@@ -11,8 +11,8 @@ const GameNavbar = ({ currentPage, setCurrentPage }) => {
 
   return (
     <nav className="game-navbar">
-      <div className="game-title" onClick={() => handleNavClick("Home")}>
-        SYED BILAL
+      <div className="game-title">
+        SYED BILAL Sherazi
       </div>
       <ul className="game-menu">
         <li
@@ -46,9 +46,7 @@ const GameNavbar = ({ currentPage, setCurrentPage }) => {
           PORTAL
         </li>
       </ul>
-      <div className="game-score" onClick={playClick}>
-        SCORE: <span>300</span>
-      </div>
+     
     </nav>
   );
 };

@@ -7,28 +7,42 @@
   background: linear-gradient(to right, #14001a, #0b0020);
   color: #fff;
   font-family: 'Press Start 2P', monospace;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1rem;
   border-bottom: 2px solid #00cfff;
+  flex-wrap: wrap;
 }
 
 .game-title {
   color: #00ffff;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
+  flex: 1 1 100%;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .game-menu {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: nowrap;
+  gap: 1rem;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.game-menu::-webkit-scrollbar {
+  display: none;
 }
 
 .game-menu li {
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   cursor: pointer;
+  white-space: nowrap;
   transition: color 0.2s ease-in-out;
+  padding: 0.3rem;
 }
 
 .game-menu li.active,
@@ -38,5 +52,17 @@
 
 .game-score {
   color: #ffcc00;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+/* Optional: sticky nav on top for better UX */
+@media (max-width: 768px) {
+  .game-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
 }
