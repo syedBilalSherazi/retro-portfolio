@@ -41,8 +41,8 @@ const AboutMe = () => {
 
           <h3 className="abilities-title" style={{ fontSize: "0.9rem" }}>SPECIAL ABILITIES</h3>
           <div className="abilities-list">
-            <span>Communication</span>
-            <span>Leadership</span>
+            <span>ANGULAR</span>
+            <span>.NET Core</span>
             <span>Problem Solving</span>
             <span>Creative Thinking</span>
             <span>CI/CD</span>
