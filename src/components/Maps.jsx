@@ -3,7 +3,7 @@ import "../styles/maps.css";
 const roadmap = [
   {
     title: "🎓 BS Computer Science",
-    description: "6th Semester, COMSATS University Islamabad. Strong academic foundation in Software Engineering, DevOps, and Cloud Computing.",
+    description: "2019, COMSATS University Islamabad. Strong academic foundation in Software Engineering, DevOps, and Cloud Computing.",
     type: "Education",
   },
   {
